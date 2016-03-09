@@ -25,9 +25,9 @@ var metadata = {
 module.exports = {
   // static data for index.html
   metadata: metadata,
-  devtool: 'source-map',
+  // devtool: 'source-map',
   debug: true,
-  // devtool: 'eval' // for faster builds use 'eval'
+  devtool: 'eval', // for faster builds use 'eval'
 
   // our angular app
   entry: { 'polyfills': './src/polyfills.ts', 'main': './src/main.ts' },
@@ -48,7 +48,10 @@ module.exports = {
     preLoaders: [
       // { test: /\.ts$/, loader: 'tslint-loader', exclude: [ helpers.root('node_modules') ] },
       // TODO(gdi2290): `exclude: [ helpers.root('node_modules/rxjs') ]` fixed with rxjs 5 beta.3 release
-      { test: /\.js$/, loader: "source-map-loader", exclude: [ helpers.root('node_modules/rxjs') ] }
+      { test: /\.js$/, loader: "source-map-loader", exclude: [
+        helpers.root('node_modules/rxjs'),
+        helpers.root('node_modules/ng2-bootstrap')
+      ] }
     ],
     loaders: [
       // Support for .ts files.

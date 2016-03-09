@@ -23,12 +23,20 @@ if ('production' === process.env.ENV) {
 
   // RxJS
   // to include every operator uncomment
-  // require('rxjs/Rx');
+  require('rxjs/Rx');
 
-  require('rxjs/add/operator/map');
-  require('rxjs/add/operator/mergeMap');
+  // require('rxjs/add/operator/map');
+  // require('rxjs/add/operator/mergeMap');
 
 }
+
+import 'angular2/platform/browser';
+import 'angular2/platform/common_dom';
+import 'angular2/router';
+import 'angular2/http';
+import 'angular2/core';
+
+import 'ng2-bootstrap/ng2-bootstrap';
 
 // For vendors for example jQuery, Lodash, angular2-jwt just import them anywhere in your app
 // Also see custom-typings.d.ts as you also need to do `typings install x` where `x` is your module

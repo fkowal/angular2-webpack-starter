@@ -19,7 +19,7 @@
     "watch:prod": "webpack --watch --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached",
     "build": "npm run build:dev",
     "prebuild:dev": "npm run clean:dist",
-    "build:dev": "webpack --progress --profile --colors --display-error-details --display-cached",
+    "build:dev": "webpack --progress --profile --colors --display-error-details --display-cached --display-modules --display-chunks --display-cached-assets",
     "prebuild:prod": "npm run clean:dist",
     "build:prod": "webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached --bail",
     "server": "npm run server:dev:hmr",
@@ -47,6 +47,7 @@
     "es6-promise": "^3.1.2",
     "es6-shim": "^0.33.3",
     "es7-reflect-metadata": "^1.6.0",
+    "ng2-bootstrap": "^1.0.5",
     "rxjs": "5.0.0-beta.2",
     "zone.js": "0.5.15"
   },
