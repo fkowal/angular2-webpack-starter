@@ -69,7 +69,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'source-map-loader',
         exclude: [
-          helpers.root('node_modules/rxjs')
+          helpers.root('node_modules/rxjs'),
+          helpers.root('node_modules/ng2-bootstrap')
         ]
       }
     ],
